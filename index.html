@@ -1,53 +1,83 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Pet Collection | Tu Marca</title>
+    <title>Studio Paw - Tu Mascota, Siempre Contigo</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333; /* Un gris oscuro para texto principal */
+        }
+        h1, h2, .font-display {
+            font-family: 'Playfair Display', serif; /* Una fuente elegante para títulos */
+        }
+        .btn-primary {
+            background-color: #000;
+            color: #fff;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px; /* Botones pill-shaped */
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .btn-primary:hover {
+            background-color: #333;
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-white antialiased">
 
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-        <h1 class="text-xl font-semibold tracking-tighter">STUDIO PAW</h1>
-        <div class="space-x-4 text-sm font-medium">
-            <a href="#" class="hover:underline">Colección</a>
-            <a href="#" class="hover:underline">Contacto</a>
-        </div>
-    </nav>
+    <header class="p-6 flex justify-between items-center max-w-7xl mx-auto border-b border-gray-100">
+        <a href="#" class="text-2xl font-display font-bold tracking-tighter text-gray-800">Studio Paw</a>
+        <nav class="space-x-8 text-sm font-medium text-gray-600">
+            <a href="#" class="hover:text-gray-900 transition-colors">Colección</a>
+            <a href="#" class="hover:text-gray-900 transition-colors">Nosotros</a>
+            <a href="#" class="hover:text-gray-900 transition-colors">Contacto</a>
+        </nav>
+    </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-12 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+    <main class="max-w-7xl mx-auto px-6 py-16 lg:py-24 grid lg:grid-cols-2 gap-16 items-center">
         
-        <div class="bg-white p-4 rounded-2xl shadow-sm">
-            <img src="TU_IMAGEN_AQUI.jpg" alt="Sudadera Personalizada" class="rounded-xl w-full object-cover">
-        </div>
-
-        <div class="space-y-6">
-            <span class="text-xs font-bold tracking-widest uppercase text-gray-400">Edición Limitada</span>
-            <h2 class="text-5xl font-semibold leading-tight">Tu mascota, <br>siempre contigo.</h2>
-            <p class="text-lg text-gray-600">Sudadera de algodón orgánico con ilustración personalizada de estilo minimalista. Hecha a mano bajo demanda para evitar el desperdicio textil.</p>
+        <div class="space-y-8 lg:pr-12">
+            <h1 class="font-display text-6xl lg:text-7xl font-bold leading-tight text-gray-900">
+                Tu compañero, <br>arte en tu piel.
+            </h1>
+            <p class="text-xl leading-relaxed text-gray-700">
+                Descubre nuestra exclusiva colección de sudaderas con ilustraciones minimalistas de tu mascota. Diseño elegante, calidad premium y un amor incondicional.
+            </p>
             
-            <div class="pt-4">
-                <p class="text-3xl font-light mb-6">39,95€</p>
-                <a href="TU_LINK_DE_PAGO_O_ETSY" class="bg-black text-white px-10 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-all inline-block shadow-xl">
-                    Personalizar Ahora
+            <div class="pt-6">
+                <a href="TU_LINK_DE_PAGO_O_ETSY" class="btn-primary">
+                    Explorar Colección
                 </a>
             </div>
 
-            <div class="pt-8 grid grid-cols-2 gap-4 text-sm text-gray-500">
-                <p>✓ Envío rápido (3-5 días)</p>
-                <p>✓ Diseño único artesanal</p>
+            <div class="pt-8 grid grid-cols-2 gap-4 text-sm text-gray-500 border-t border-gray-100 mt-10">
+                <p class="flex items-center space-x-2">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>Calidad Premium Certificada</span>
+                </p>
+                <p class="flex items-center space-x-2">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <span>Hecho bajo Demanda, Sin Desperdicio</span>
+                </p>
             </div>
         </div>
+        
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-gray-100 transform hover:scale-105 transition-transform duration-500 ease-out">
+            <img src="TU_IMAGEN_MOCKUP_AQUI.jpg" alt="Sudadera Personalizada de Mascota" class="w-full h-auto object-cover">
+            <div class="absolute inset-0 flex items-end p-8 bg-gradient-to-t from-black/40 to-transparent">
+                <p class="text-white text-3xl font-bold font-display leading-none">Desde 39,95€</p>
+            </div>
+        </div>
+
     </main>
 
-    <footer class="text-center py-12 text-gray-400 text-xs">
-        &copy; 2026 Studio Paw. Todos los derechos reservados.
+    <footer class="text-center py-12 text-gray-500 text-sm border-t border-gray-100 mt-20">
+        <p>&copy; 2026 Studio Paw. Todos los derechos reservados.</p>
+        <p class="mt-2">Diseño y Confort para Amantes de los Animales.</p>
     </footer>
 
 </body>
-</
+</html>
