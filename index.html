@@ -1,101 +1,191 @@
+
+
 <!DOCTYPE html>
-<html lang="es"><head>
-  
-  <meta charset="UTF-8">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmorExpress | Los Mejores Regalos de San Valentín 2026</title>
+    <style>
+        :root {
+            --amazon-orange: #FF9900;
+            --amazon-dark: #232F3E;
+            --love-red: #e11d48;
+        }
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Regalos San Valentín 2026 - Ideas Express</title>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
 
-  
-  
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        header {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--love-red);
+        }
 
-</head><body class="bg-red-50 text-gray-800 font-sans">
-<nav class="bg-white shadow-md sticky top-0 z-50"> </nav>
-<div class="container mx-auto px-4 py-3 flex justify-between items-center"><a href="index.html" class="text-2xl font-bold text-red-600">❤️
-AmorExpress</a>
-<div class="space-x-4"> <a href="para-ella.html" class="hover:text-red-500 font-medium">Para Ella</a> <a href="para-el.html" class="hover:text-red-500 font-medium">Para Él</a>
+        h1 { margin: 0; color: var(--love-red); font-size: 1.8rem; }
+
+        /* Estilo del Reloj */
+        #countdown-container {
+            background: #fff1f2;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #fda4af;
+        }
+
+        #countdown-text {
+            margin: 0;
+            color: var(--love-red);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Contenedor de Productos */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Tarjeta de Producto */
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 1rem;
+            margin: 10px 0;
+            height: 45px;
+            overflow: hidden;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #b12704;
+            margin-bottom: 15px;
+        }
+
+        /* Botón Amazon */
+        .btn-amazon {
+            background-color: var(--amazon-orange);
+            color: #111;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            border: 1px solid #a88734;
+            transition: background 0.2s;
+        }
+
+        .btn-amazon:hover {
+            background-color: #f7dfa5;
+            background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>❤️ AmorExpress</h1>
+    <p>La selección definitiva para tu persona favorita</p>
+</header>
+
+<div id="countdown-container">
+    <p id="countdown-text">Cargando oferta limitada...</p>
 </div>
-</div>
 
-<header class="bg-red-600 text-white text-center py-20 px-4"> </header>
-<h1 class="text-4xl md:text-6xl font-bold mb-4">¿San Valentín en 6 días?</h1><br>
-<div id="countdown" style="font-weight: bold; color: #e11d48; font-size: 1.2rem;"></div>
-
-<p class="text-xl md:text-2xl mb-8">No entres en pánico. Aquí tienes
-los regalos que llegan a tiempo.</p>
-
-<a href="#ofertas" class="bg-white text-red-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition">Ver
-Regalos Rápidos</a> <section id="ofertas" class="container mx-auto px-4 py-16"> </section>
-<h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Top
-Ventas Amazon</h2>
-
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100">
-<div class="h-64 bg-gray-100 flex items-center justify-center"> <img src="https://m.media-amazon.com/images/I/61wvgeiiM+L._AC_SL1000_.jpg" alt="Nombre del producto" class="object-contain h-full w-full p-2"> </div>
-<div class="p-4">
-<h3 class="font-bold text-lg mb-1 truncate">Lampara Personalizada</h3>
-<p class="text-gray-500 text-sm mb-3">Ilumina el Amor: Lámpara
-Personalizada para Parejas - Regalo Único de San Valentín creado por
-artesanos en España. AMOR INFINITO - Varios Tamaños Disponibles".</p>
-<div class="flex items-center justify-between"> <span class="text-xl font-bold text-red-600">22.99€</span> <a href="https://amzn.to/4r8De9A" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-black text-sm font-bold py-2 px-3 rounded">
-Ver en Amazon </a> </div>
-</div>
-</div>
-<div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100">
-<div class="h-64 bg-gray-100 flex items-center justify-center"> <img src="https://m.media-amazon.com/images/I/71axfbanjJL._AC_SL1200_.jpg" alt="Nombre del producto" class="object-contain h-full w-full p-2"> </div>
-<div class="p-4">
-<h3 class="font-bold text-lg mb-1 truncate">Lámpara con foto
-personalizada</h3>
-<p class="text-gray-500 text-sm mb-3">Sorprende con un regalo que
-seguro que le encantará..</p>
-<div class="flex items-center justify-between"> <span class="text-xl font-bold text-red-600">39.90€</span> <a href="https://amzn.to/4am1Ggm" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-black text-sm font-bold py-2 px-3 rounded">
-Ver en Amazon </a> </div>
-</div>
-</div>
-
-<div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100">
-    <div class="h-64 bg-gray-100 flex items-center justify-center">
-        <img src="https://m.media-amazon.com/images/I/51MuDah9I1L._AC_.jpg" alt="Nombre del producto" class="object-contain h-full w-full p-2">
+<div class="container">
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71X8X8x-8pL._AC_SL1500_.jpg" alt="Lámpara Personalizada">
+        <h3>Lámpara de Metacrilato Personalizada con Foto</h3>
+        <p class="price">24,99€</p>
+        <a href="#" class="btn-amazon">Ver en Amazon</a>
     </div>
-    <div class="p-4">
-        <h3 class="font-bold text-lg mb-1 truncate">Lámpara Personalizada con Fotos Collage y Textos.</h3>
-        <p class="text-gray-500 text-sm mb-3">Sorprende a esa persona especial con esta lámpara personalizada con tus fotos favoritas y los textos que escojas.</p>
-        <div class="flex items-center justify-between">
-            <span class="text-xl font-bold text-red-600">13.99€</span>
-            <a href="https://amzn.to/4krxSni" target="_blank" class="bg-yellow-400 hover:bg-yellow-500 text-black text-sm font-bold py-2 px-3 rounded">
-                Ver en Amazon
-            </a>
-        </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61Nl-H6k6vL._AC_SL1000_.jpg" alt="Rosa Eterna">
+        <h3>Rosa Eterna Roja con Cúpula de Cristal</h3>
+        <p class="price">19,95€</p>
+        <a href="#" class="btn-amazon">Ver en Amazon</a>
+    </div>
+
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71YyM7yYQUL._AC_SL1500_.jpg" alt="Caja de Chocolates">
+        <h3>Caja Regalo de Chocolates Kinder - Especial Amor</h3>
+        <p class="price">15,50€</p>
+        <a href="#" class="btn-amazon">Ver en Amazon</a>
     </div>
 </div>
 
-</div>
+<footer>
+    <p>© 2026 AmorExpress. Como afiliados de Amazon, ganamos una comisión por las compras adscritas.</p>
+</footer>
 
-<footer class="bg-gray-800 text-white py-8 mt-12"> </footer>
-<div class="container mx-auto px-4 text-center">
-<p>© 2026 Ideas San Valentín.</p>
-<div class="mt-4 text-sm text-gray-400"> <a href="privacidad.html" class="hover:text-white underline">Aviso Legal y Política de Afiliados</a>
-</div>
-</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fecha objetivo: 14 de febrero de 2026
+        const targetDate = new Date("February 14, 2026 00:00:00").getTime();
+        const textElement = document.getElementById("countdown-text");
+
+        function updateClock() {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            if (diff <= 0) {
+                textElement.innerHTML = "¡Feliz San Valentín! ❤️ Aprovecha las ofertas de última hora";
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            textElement.innerHTML = `⌛ ¡Quedan solo <b>${days}d ${hours}h ${mins}m ${secs}s</b> para San Valentín!`;
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+    });
+</script>
 
 </body>
-const targetDate = new Date("February 14, 2026 00:00:00").getTime();
-
-setInterval(() => {
-  const now = new Date().getTime();
-  const diff = targetDate - now;
-
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-
-  document.getElementById("countdown").innerHTML = 
-    `¡Date prisa! Quedan ${days}d ${hours}h ${mins}m para San Valentín`;
-}, 1000);
-
 </html>
-
