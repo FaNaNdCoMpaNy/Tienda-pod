@@ -1,36 +1,35 @@
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AmorExpress | Los Mejores Regalos de San Valentín 2026</title>
+    <title>AmorExpress | Especial San Valentín 2026</title>
     <style>
         :root {
             --amazon-orange: #FF9900;
-            --amazon-dark: #232F3E;
             --love-red: #e11d48;
+            --bg-gray: #f8f9fa;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
+            background-color: var(--bg-gray);
             margin: 0;
             padding: 0;
-            color: #333;
+            scroll-behavior: smooth;
         }
 
         header {
             background-color: white;
-            padding: 20px;
+            padding: 25px 20px;
             text-align: center;
-            border-bottom: 2px solid var(--love-red);
+            border-bottom: 3px solid var(--love-red);
         }
 
-        h1 { margin: 0; color: var(--love-red); font-size: 1.8rem; }
+        h1 { margin: 0; color: var(--love-red); font-size: 2rem; }
 
-        /* Estilo del Reloj */
+        /* Cuenta Atrás */
         #countdown-container {
             background: #fff1f2;
             padding: 15px;
@@ -45,59 +44,69 @@
             font-size: 1.1rem;
         }
 
-        /* Contenedor de Productos */
+        /* Menú Navegación */
+        nav {
+            text-align: center;
+            padding: 12px;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover { background: #fff1f2; color: var(--love-red); }
+
+        /* Grid de Productos */
         .container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 25px;
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Tarjeta de Producto */
         .product-card {
             background: white;
-            border-radius: 12px;
-            padding: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             border: 1px solid #eee;
         }
 
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
+        .product-card:hover { transform: translateY(-8px); }
 
         .product-card img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: contain;
-            border-bottom: 1px solid #f0f0f0;
-            margin-bottom: 10px;
-        }
-
-        .product-card h3 {
-            font-size: 1rem;
-            margin: 10px 0;
-            height: 45px;
-            overflow: hidden;
-        }
-
-        .price {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #b12704;
             margin-bottom: 15px;
         }
 
-        /* Botón Amazon */
+        .product-card h3 { font-size: 1.1rem; margin: 10px 0; height: 50px; overflow: hidden; color: #333; }
+
+        .price { font-size: 1.5rem; font-weight: bold; color: #b12704; margin-bottom: 15px; }
+
         .btn-amazon {
-            background-color: var(--amazon-orange);
+            background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
             color: #111;
             text-align: center;
             padding: 12px;
@@ -105,55 +114,115 @@
             border-radius: 8px;
             font-weight: bold;
             border: 1px solid #a88734;
-            transition: background 0.2s;
         }
 
-        .btn-amazon:hover {
-            background-color: #f7dfa5;
-            background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+        /* Botón Volver Arriba */
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--love-red);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
         }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.8rem;
-            color: #666;
-        }
+        h2 { text-align: center; margin-top: 50px; color: #444; font-size: 1.6rem; }
+
+        footer { text-align: center; padding: 50px 20px; font-size: 0.85rem; color: #777; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>❤️ AmorExpress</h1>
-    <p>La selección definitiva para tu persona favorita</p>
+    <p>Regalos inolvidables para un San Valentín especial</p>
 </header>
 
 <div id="countdown-container">
-    <p id="countdown-text">Cargando oferta limitada...</p>
+    <p id="countdown-text">Cargando cuenta atrás...</p>
 </div>
 
+<nav>
+    <a href="#lamparas">💡 Lámparas</a>
+    <a href="#joyas">💎 Joyas</a>
+    <a href="#perfumes">🌸 Perfumes</a>
+    <a href="#tecnologia">🎧 Tecnología</a>
+</nav>
+
+<h2 id="lamparas">💡 Lámparas Personalizadas</h2>
 <div class="container">
     <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71X8X8x-8pL._AC_SL1500_.jpg" alt="Lámpara Personalizada">
-        <h3>Lámpara de Metacrilato Personalizada con Foto</h3>
+        <img src="https://m.media-amazon.com/images/I/71X8X8x-8pL._AC_SL1500_.jpg" alt="Lámpara Foto">
+        <h3>Lámpara de Metacrilato Personalizada con tu Foto</h3>
         <p class="price">24,99€</p>
         <a href="#" class="btn-amazon">Ver en Amazon</a>
     </div>
-
     <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/61Nl-H6k6vL._AC_SL1000_.jpg" alt="Rosa Eterna">
-        <h3>Rosa Eterna Roja con Cúpula de Cristal</h3>
-        <p class="price">19,95€</p>
-        <a href="#" class="btn-amazon">Ver en Amazon</a>
-    </div>
-
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71YyM7yYQUL._AC_SL1500_.jpg" alt="Caja de Chocolates">
-        <h3>Caja Regalo de Chocolates Kinder - Especial Amor</h3>
-        <p class="price">15,50€</p>
+        <img src="https://m.media-amazon.com/images/I/71-0G9O5RmL._AC_SL1500_.jpg" alt="Proyector">
+        <h3>Proyector de Estrellas Galaxia Romántica</h3>
+        <p class="price">29,99€</p>
         <a href="#" class="btn-amazon">Ver en Amazon</a>
     </div>
 </div>
+
+<h2 id="joyas">💎 Joyas y Detalles</h2>
+<div class="container">
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71z7m7W4S0L._AC_SY695_.jpg" alt="Collar">
+        <h3>Collar Corazón Plata de Ley 925</h3>
+        <p class="price">32,00€</p>
+        <a href="#" class="btn-amazon">Ver en Amazon</a>
+    </div>
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61N9UoT-7oL._AC_SL1000_.jpg" alt="Pulseras">
+        <h3>Pack 2 Pulseras Magnéticas para Parejas</h3>
+        <p class="price">12,99€</p>
+        <a href="#" class="btn-amazon">Ver en Amazon</a>
+    </div>
+</div>
+
+<h2 id="perfumes">🌸 Perfumes y Cuidado</h2>
+<div class="container">
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61mO-pW6F2L._AC_SL1000_.jpg" alt="Perfume">
+        <h3>Calvin Klein Eternity for Women - 100ml</h3>
+        <p class="price">45,90€</p>
+        <a href="#" class="btn-amazon">Ver en Amazon</a>
+    </div>
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/81xUe5S7S0L._AC_SL1500_.jpg" alt="Baño">
+        <h3>Set de Bombas de Baño Orgánicas Relax</h3>
+        <p class="price">18,99€</p>
+        <a href="#" class="btn-amazon">Ver en Amazon</a>
+    </div>
+</div>
+
+<h2 id="tecnologia">🎧 Tecnología</h2>
+<div class="container">
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/6127n796S6L._AC_SL1500_.jpg" alt="Altavoz">
+        <h3>Altavoz Bluetooth JBL GO 3 Waterproof</h3>
+        <p class="price">34,99€</p>
+        <a href="#" class="btn-amazon">Ver en Amazon</a>
+    </div>
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/51HBom8MC7L._AC_SL1000_.jpg" alt="Cámara">
+        <h3>Fujifilm Instax Mini 12 - Cámara Instantánea</h3>
+        <p class="price">79,00€</p>
+        <a href="#" class="btn-amazon">Ver en Amazon</a>
+    </div>
+</div>
+
+<a href="#" id="backToTop" title="Volver arriba">↑</a>
 
 <footer>
     <p>© 2026 AmorExpress. Como afiliados de Amazon, ganamos una comisión por las compras adscritas.</p>
@@ -161,29 +230,35 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Fecha objetivo: 14 de febrero de 2026
+        // --- CUENTA ATRÁS ORIGINAL ---
         const targetDate = new Date("February 14, 2026 00:00:00").getTime();
         const textElement = document.getElementById("countdown-text");
 
         function updateClock() {
             const now = new Date().getTime();
             const diff = targetDate - now;
-
             if (diff <= 0) {
-                textElement.innerHTML = "¡Feliz San Valentín! ❤️ Aprovecha las ofertas de última hora";
+                textElement.innerHTML = "¡Feliz San Valentín! ❤️";
                 return;
             }
-
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             const secs = Math.floor((diff % (1000 * 60)) / 1000);
-
-            textElement.innerHTML = `⌛ ¡Quedan solo <b>${days}d ${hours}h ${mins}m ${secs}s</b> para San Valentín!`;
+            textElement.innerHTML = `⏳ ¡Date prisa! Quedan <b>${days}d ${hours}h ${mins}m ${secs}s</b> para San Valentín`;
         }
-
-        updateClock();
         setInterval(updateClock, 1000);
+        updateClock();
+
+        // --- BOTÓN VOLVER ARRIBA ---
+        const btt = document.getElementById("backToTop");
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btt.style.display = "flex";
+            } else {
+                btt.style.display = "none";
+            }
+        };
     });
 </script>
 
