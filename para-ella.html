@@ -5,69 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Ella | San Valentín 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glow { animation: glow 1.5s infinite; }
+        @keyframes glow { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+    </style>
 </head>
 <body class="bg-pink-50 text-gray-800">
+    
     <nav class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-black text-red-600 tracking-tighter">❤️ AMOREXPRESS</a>
-            <a href="index.html" class="font-bold text-sm uppercase text-gray-400">Volver</a>
+            <a href="index.html" class="font-bold text-sm uppercase text-gray-400 hover:text-red-500 transition">Volver</a>
         </div>
     </nav>
 
-    <div class="bg-pink-400 text-white py-8 text-center sticky top-[56px] z-40 shadow-md">
-        <p class="text-[10px] font-bold uppercase mb-2">Pide ya para ella. Tiempo restante:</p>
-        <div class="flex justify-center gap-4 font-black">
-            <div class="text-center"><span id="days" class="text-2xl">00</span><span class="text-[8px] block">DÍAS</span></div>
-            <div class="text-center"><span id="hours" class="text-2xl">00</span><span class="text-[8px] block">HORAS</span></div>
-            <div class="text-center"><span id="minutes" class="text-2xl">00</span><span class="text-[8px] block">MIN</span></div>
-            <div class="text-center"><span id="seconds" class="text-2xl text-red-200">00</span><span class="text-[8px] block">SEG</span></div>
+    <div class="bg-pink-500 text-white py-4 text-center sticky top-[52px] z-40 shadow-lg border-b border-pink-600">
+        <p class="text-[10px] font-black uppercase tracking-widest mb-2 opacity-90">Pide ya para recibirlo a tiempo. Quedan:</p>
+        <div id="timer-display" class="flex justify-center gap-4 font-black">
+            <div class="text-center"><span id="days" class="text-2xl md:text-3xl">00</span><span class="text-[8px] block opacity-80">DÍAS</span></div>
+            <div class="text-center"><span id="hours" class="text-2xl md:text-3xl">00</span><span class="text-[8px] block opacity-80">HORAS</span></div>
+            <div class="text-center"><span id="minutes" class="text-2xl md:text-3xl">00</span><span class="text-[8px] block opacity-80">MIN</span></div>
+            <div class="text-center"><span id="seconds" class="text-2xl md:text-3xl text-red-200 glow">00</span><span class="text-[8px] block opacity-80">SEG</span></div>
         </div>
     </div>
 
     <main class="container mx-auto px-4 py-12">
-        <h1 class="text-3xl font-black text-pink-600 mb-8 uppercase italic">Regalos Para Ella Mas Vendidos</h1>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div class="bg-white rounded-2xl p-4 shadow-sm border border-pink-100">
-                <img src="https://m.media-amazon.com/images/I/61KFNQO9P6L._AC_SX679_.jpg" class="h-40 w-full object-contain mb-4">
-                <h3 class="font-bold text-xs h-8 overflow-hidden">Collar Proyeccion Te Amo</h3>
-                <p class="text-lg font-black text-pink-600 my-2">24,99€</p>
-                <a href="https://amzn.to/3MmnsZr" target="_blank" class="block bg-slate-900 text-white text-center py-2 rounded font-bold text-[10px] uppercase">Ver en Amazon</a>
-            </div>
-            <div class="bg-white rounded-2xl p-4 shadow-sm border border-pink-100">
-                <img src="https://m.media-amazon.com/images/I/81mv6r3JxCL._AC_SL1500_.jpg" class="h-40 w-full object-contain mb-4">
-                <h3 class="font-bold text-xs h-8 overflow-hidden">Kit de fundición de manos para parejas</h3>
-                <p class="text-lg font-black text-pink-600 my-2">24,99€</p>
-                <a href="https://amzn.to/4kq8Vss" target="_blank" class="block bg-slate-900 text-white text-center py-2 rounded font-bold text-[10px] uppercase">Ver en Amazon</a>
-            </div>
-            <div class="bg-white rounded-2xl p-4 shadow-sm border border-pink-100">
-                <img src="https://m.media-amazon.com/images/I/71P0A6tGVfL._AC_SL1500_.jpg" class="h-40 w-full object-contain mb-4">
-                <h3 class="font-bold text-xs h-8 overflow-hidden">Rosa Eterna Bella y Bestia</h3>
-                <p class="text-lg font-black text-pink-600 my-2">24,99€</p>
-                <a href="https://amzn.to/4ksvUDa" target="_blank" class="block bg-slate-900 text-white text-center py-2 rounded font-bold text-[10px] uppercase">Ver en Amazon</a>
-            </div>
-            <div class="bg-white rounded-2xl p-4 shadow-sm border border-pink-100">
-                <img src="https://m.media-amazon.com/images/I/61XAauW+uHL._AC_SL1500_.jpg" class="h-40 w-full object-contain mb-4">
-                <h3 class="font-bold text-xs h-8 overflow-hidden">Espejo Maquillaje Luz Led</h3>
-                <p class="text-lg font-black text-pink-600 my-2">26,99€</p>
-                <a href="https://amzn.to/4bJbiEu" target="_blank" class="block bg-slate-900 text-white text-center py-2 rounded font-bold text-[10px] uppercase">Ver en Amazon</a>
-            </div>
-            </div>
-    </main>
+        <h1 class="text-3xl md:text-4xl font-black text-pink-600 mb-2 uppercase italic tracking-tighter text-center md:text-left">
+            Regalos Para Ella
+        </h1>
+        <p class="text-gray-500 text-sm mb-10 text-center md:text-left">Selección de los productos más vendidos con entrega garantizada.</p>
 
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-pink-100 flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl bg-gray-50 mb-4">
+                        <img src="https://m.media-amazon.com/images/I/61KFNQO9P6L._AC_SX679_.jpg" class="h-64 md:h-44 w-full object-contain p-2" referrerpolicy="no-referrer">
+                        <div class="absolute top-2 left-2 bg-green-500 text-white text-[9px] font-black px-2 py-1 rounded shadow">ENVÍO MAÑANA</div>
+                    </div>
+                    <div class="flex text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span class="text-gray-400 ml-1">(+800)</span></div>
+                    <h3 class="font-bold text-sm md:text-xs uppercase mb-2">Collar Proyeccion Te Amo</h3>
+                    <div class="flex items-baseline gap-2 my-2">
+                        <span class="text-2xl md:text-xl font-black text-pink-600">24,99€</span>
+                        <span class="text-xs text-gray-400 line-through">29,99€</span>
+                    </div>
+                </div>
+                <a href="https://amzn.to/3MmnsZr" target="_blank" class="block w-full bg-slate-900 text-white text-center py-4 md:py-3 rounded-xl font-bold text-xs uppercase hover:bg-black transition">Lo quiero para ella</a>
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-pink-100 flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl bg-gray-50 mb-4">
+                        <img src="https://m.media-amazon.com/images/I/81mv6r3JxCL._AC_SL1500_.jpg" class="h-64 md:h-44 w-full object-contain p-2" referrerpolicy="no-referrer">
+                        <div class="absolute top-2 left-2 bg-red-600 text-white text-[9px] font-black px-2 py-1 rounded shadow uppercase tracking-tighter italic">Viral en TikTok</div>
+                    </div>
+                    <div class="flex text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span class="text-gray-400 ml-1">(+2.100)</span></div>
+                    <h3 class="font-bold text-sm md:text-xs uppercase mb-2">Kit de fundición de manos</h3>
+                    <div class="flex items-baseline gap-2 my-2">
+                        <span class="text-2xl md:text-xl font-black text-pink-600">24,99€</span>
+                        <span class="text-xs text-gray-400 line-through">35,90€</span>
+                    </div>
+                </div>
+                <a href="https://amzn.to/4kq8Vss" target="_blank" class="block w-full bg-slate-900 text-white text-center py-4 md:py-3 rounded-xl font-bold text-xs uppercase hover:bg-black transition">Lo quiero para ella</a>
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-pink-100 flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl bg-gray-50 mb-4">
+                        <img src="https://m.media-amazon.com/images/I/71P0A6tGVfL._AC_SL1500_.jpg" class="h-64 md:h-44 w-full object-contain p-2" referrerpolicy="no-referrer">
+                        <div class="absolute top-2 left-2 bg-pink-500 text-white text-[9px] font-black px-2 py-1 rounded shadow uppercase tracking-tighter">Regalo Premium</div>
+                    </div>
+                    <div class="flex text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span class="text-gray-400 ml-1">(+1.200)</span></div>
+                    <h3 class="font-bold text-sm md:text-xs uppercase mb-2">Rosa Eterna Bella y Bestia</h3>
+                    <div class="flex items-baseline gap-2 my-2">
+                        <span class="text-2xl md:text-xl font-black text-pink-600">24,99€</span>
+                        <span class="text-xs text-gray-400 line-through">29,99€</span>
+                    </div>
+                </div>
+                <a href="https://amzn.to/4ksvUDa" target="_blank" class="block w-full bg-slate-900 text-white text-center py-4 md:py-3 rounded-xl font-bold text-xs uppercase hover:bg-black transition">Lo quiero para ella</a>
+            </div>
+
+            <div class="bg-white rounded-2xl p-5 shadow-sm border border-pink-100 flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl bg-gray-50 mb-4">
+                        <img src="https://m.media-amazon.com/images/I/61XAauW+uHL._AC_SL1500_.jpg" class="h-64 md:h-44 w-full object-contain p-2" referrerpolicy="no-referrer">
+                        <div class="absolute top-2 right-2 bg-blue-500 text-white text-[9px] font-black px-2 py-1 rounded shadow">TOP ÚTIL</div>
+                    </div>
+                    <div class="flex text-yellow-400 text-[10px] mb-1"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span class="text-gray-400 ml-1">(+4.500)</span></div>
+                    <h3 class="font-bold text-sm md:text-xs uppercase mb-2">Espejo Maquillaje Luz Led</h3>
+                    <div class="flex items-baseline gap-2 my-2">
+                        <span class="text-2xl md:text-xl font-black text-pink-600">26,99€</span>
+                        <span class="text-xs text-gray-400 line-through">32,95€</span>
+                    </div>
+                </div>
+                <a href="https://amzn.to/4bJbiEu" target="_blank" class="block w-full bg-slate-900 text-white text-center py-4 md:py-3 rounded-xl font-bold text-xs uppercase hover:bg-black transition">Lo quiero para ella</a>
+            </div>
+
+        </div>
+    </main>
 
     <script>
         function updateTimer() {
             const target = new Date("February 14, 2026 00:00:00").getTime();
             const now = new Date().getTime();
             const diff = target - now;
+            
+            const d = document.getElementById("days");
+            const h = document.getElementById("hours");
+            const m = document.getElementById("minutes");
+            const s = document.getElementById("seconds");
+
             if (diff > 0) {
-                document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
-                document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
-                document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
-                document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+                if(d) d.innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+                if(h) h.innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+                if(m) m.innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                if(s) s.innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+            } else {
+                const timerContainer = document.getElementById("timer-display");
+                if (timerContainer) {
+                    timerContainer.innerHTML = "<h3 class='text-xl font-black uppercase italic tracking-tighter'>¡FELIZ SAN VALENTÍN! ❤️</h3>";
+                }
             }
         }
-        setInterval(updateTimer, 1000); updateTimer();
+        setInterval(updateTimer, 1000); 
+        updateTimer();
     </script>
 </body>
 </html>
