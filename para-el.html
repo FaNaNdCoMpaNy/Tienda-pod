@@ -5,72 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Él | San Valentín 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glow-red { animation: glow-red 1.5s infinite; }
+        @keyframes glow-red { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+    </style>
 </head>
 <body class="bg-slate-900 text-gray-100">
+
     <nav class="bg-slate-800 shadow-md sticky top-0 z-50 border-b border-slate-700">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-black text-red-500 tracking-tighter">❤️ AMOREXPRESS</a>
-            <a href="index.html" class="font-bold text-sm uppercase text-slate-500">Volver</a>
+            <a href="index.html" class="font-bold text-sm uppercase text-slate-500 hover:text-white transition">Volver</a>
         </div>
     </nav>
 
-    <div class="bg-red-600 text-white py-4 text-center sticky top-[56px] z-40">
-        <div class="flex justify-center gap-6 font-black items-center">
-            <p class="text-[10px] uppercase hidden md:block tracking-widest">Queda poco tiempo:</p>
-            <div class="flex gap-4">
-                <div class="text-center"><span id="days" class="text-xl block">00</span><span class="text-[7px]">DÍAS</span></div>
-                <div class="text-center"><span id="hours" class="text-xl block">00</span><span class="text-[7px]">HORAS</span></div>
-                <div class="text-center"><span id="minutes" class="text-xl block">00</span><span class="text-[7px]">MIN</span></div>
-                <div class="text-center"><span id="seconds" class="text-xl block text-slate-900">00</span><span class="text-[7px]">SEG</span></div>
-            </div>
+    <div class="bg-red-600 text-white py-4 text-center sticky top-[52px] z-40 shadow-xl">
+        <p class="text-[10px] font-black uppercase tracking-[0.2em] mb-2 opacity-90">Pide hoy para asegurar la entrega. Quedan:</p>
+        <div id="timer-display" class="flex justify-center gap-6 font-black items-center">
+            <div class="text-center"><span id="days" class="text-2xl md:text-3xl block">00</span><span class="text-[7px] opacity-70">DÍAS</span></div>
+            <div class="text-center"><span id="hours" class="text-2xl md:text-3xl block">00</span><span class="text-[7px] opacity-70">HORAS</span></div>
+            <div class="text-center"><span id="minutes" class="text-2xl md:text-3xl block">00</span><span class="text-[7px] opacity-70">MIN</span></div>
+            <div class="text-center"><span id="seconds" class="text-2xl md:text-3xl block text-slate-900 glow-red">00</span><span class="text-[7px] opacity-70 uppercase font-bold">Seg</span></div>
         </div>
     </div>
 
     <main class="container mx-auto px-4 py-12">
-        <h1 class="text-3xl font-black mb-8 uppercase italic border-l-4 border-red-600 pl-3">Regalos Para Él Mas Vendidos</h1>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
-    
-    <div class="bg-slate-800 rounded-2xl p-4 shadow-xl border border-slate-700 flex flex-col justify-between">
-        <div>
-            <img src="https://m.media-amazon.com/images/I/61VF7oj9gIL._AC_SY300_SX300_QL70_ML2_.jpg" referrerpolicy="no-referrer" class="h-48 w-full object-contain mb-4 rounded-lg bg-slate-700 p-2">
-            <h3 class="font-bold text-sm line-clamp-2 text-white italic">Buscador de Objetos Bluetooth</h3>
-            <p class="text-blue-400 font-black text-xl my-2">23.73€</p>
-            <p class="text-[10px] text-blue-300 font-bold mb-3 uppercase tracking-widest">⚡ Top Ventas Tech</p>
+        <div class="mb-10">
+            <h1 class="text-3xl md:text-4xl font-black mb-2 uppercase italic border-l-4 border-red-600 pl-3">Regalos Para Él</h1>
+            <p class="text-slate-400 text-sm italic">Los favoritos de 2026 con envío ultra rápido.</p>
         </div>
-        <a href="https://amzn.to/3O3cHfb" target="_blank" class="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-bold text-xs uppercase hover:bg-red-700 transition">Ver en Amazon</a>
-    </div>
 
-    <div class="bg-slate-800 rounded-2xl p-4 shadow-xl border border-slate-700 flex flex-col justify-between">
-        <div>
-            <img src="https://m.media-amazon.com/images/I/71N3nvhg5lL._AC_SX300_SY300_QL70_ML2_.jpg" referrerpolicy="no-referrer" class="h-48 w-full object-contain mb-4 rounded-lg bg-slate-700 p-2">
-            <h3 class="font-bold text-sm line-clamp-2 text-white italic">Set de Piedras para Whisky Premium</h3>
-            <p class="text-blue-400 font-black text-xl my-2">21,95€</p>
-            <p class="text-[10px] text-blue-300 font-bold mb-3 uppercase tracking-widest">🎁 Regalo con Clase</p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            
+            <div class="bg-slate-800 rounded-2xl p-5 shadow-xl border border-slate-700 flex flex-col justify-between hover:border-red-500 transition duration-300 group">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl bg-slate-700 p-2 mb-4">
+                        <img src="https://m.media-amazon.com/images/I/61VF7oj9gIL._AC_SY300_SX300_QL70_ML2_.jpg" referrerpolicy="no-referrer" class="h-64 md:h-44 w-full object-contain group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-2 left-2 bg-blue-600 text-white text-[9px] font-black px-2 py-1 rounded">PRIME ✅</div>
+                    </div>
+                    <div class="flex text-yellow-500 text-[10px] mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span class="text-slate-400 ml-1">(+15k valoraciones)</span></div>
+                    <h3 class="font-bold text-sm line-clamp-2 text-white italic mb-2">Buscador de Objetos Bluetooth</h3>
+                    <div class="flex items-baseline gap-2 mb-3">
+                        <span class="text-2xl font-black text-blue-400">23,73€</span>
+                        <span class="text-xs text-slate-500 line-through">29,99€</span>
+                    </div>
+                    <p class="text-[10px] text-blue-300 font-bold mb-4 uppercase tracking-widest">⚡ Top Ventas Tech</p>
+                </div>
+                <a href="https://amzn.to/3O3cHfb" target="_blank" class="block w-full bg-red-600 text-white text-center py-4 md:py-3 rounded-xl font-bold text-xs uppercase hover:bg-red-700 transition shadow-lg">Comprar ahora</a>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-5 shadow-xl border border-slate-700 flex flex-col justify-between hover:border-red-500 transition duration-300 group">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl bg-slate-700 p-2 mb-4">
+                        <img src="https://m.media-amazon.com/images/I/71N3nvhg5lL._AC_SX300_SY300_QL70_ML2_.jpg" referrerpolicy="no-referrer" class="h-64 md:h-44 w-full object-contain group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-2 right-2 bg-slate-900/80 text-white text-[9px] font-black px-2 py-1 rounded border border-slate-600">PREMIUM</div>
+                    </div>
+                    <div class="flex text-yellow-500 text-[10px] mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span class="text-slate-400 ml-1">(+4.200)</span></div>
+                    <h3 class="font-bold text-sm line-clamp-2 text-white italic mb-2">Set de Piedras para Whisky Premium</h3>
+                    <div class="flex items-baseline gap-2 mb-3">
+                        <span class="text-2xl font-black text-blue-400">21,95€</span>
+                        <span class="text-xs text-slate-500 line-through">30,00€</span>
+                    </div>
+                    <p class="text-[10px] text-blue-300 font-bold mb-4 uppercase tracking-widest">🎁 Regalo con Clase</p>
+                </div>
+                <a href="https://amzn.to/4bDDXe1" target="_blank" class="block w-full bg-red-600 text-white text-center py-4 md:py-3 rounded-xl font-bold text-xs uppercase hover:bg-red-700 transition shadow-lg">Comprar ahora</a>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-5 shadow-xl border border-slate-700 flex flex-col justify-between hover:border-red-500 transition duration-300 group">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl bg-slate-700 p-2 mb-4">
+                        <img src="https://m.media-amazon.com/images/I/71AISiv3ywL._AC_SY300_SX300_QL70_ML2_.jpg" referrerpolicy="no-referrer" class="h-64 md:h-44 w-full object-contain group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="flex text-yellow-500 text-[10px] mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span class="text-slate-400 ml-1">(+8.900)</span></div>
+                    <h3 class="font-bold text-sm line-clamp-2 text-white italic mb-2">Multiherramienta 18-en-1 Acero</h3>
+                    <div class="flex items-baseline gap-2 mb-3">
+                        <span class="text-2xl font-black text-blue-400">20,89€</span>
+                        <span class="text-xs text-slate-500 line-through">25,99€</span>
+                    </div>
+                    <p class="text-[10px] text-blue-300 font-bold mb-4 uppercase tracking-widest">🛠️ Útil y Resistente</p>
+                </div>
+                <a href="https://amzn.to/4qoxtDm" target="_blank" class="block w-full bg-red-600 text-white text-center py-4 md:py-3 rounded-xl font-bold text-xs uppercase hover:bg-red-700 transition shadow-lg">Comprar ahora</a>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl p-5 shadow-xl border border-slate-700 flex flex-col justify-between hover:border-red-500 transition duration-300 group">
+                <div>
+                    <div class="relative overflow-hidden rounded-xl bg-slate-700 p-2 mb-4">
+                        <img src="https://m.media-amazon.com/images/I/615oN+klRtL._AC_SY300_SX300_QL70_ML2_.jpg" referrerpolicy="no-referrer" class="h-64 md:h-44 w-full object-contain group-hover:scale-110 transition duration-500">
+                        <div class="absolute bottom-2 right-2 bg-green-500 text-white text-[8px] font-black px-2 py-0.5 rounded shadow">LLEGA MAÑANA</div>
+                    </div>
+                    <div class="flex text-yellow-500 text-[10px] mb-2"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span class="text-slate-400 ml-1">(+12k)</span></div>
+                    <h3 class="font-bold text-sm line-clamp-2 text-white italic mb-2">Recortadora Híbrida Profesional</h3>
+                    <div class="flex items-baseline gap-2 mb-3">
+                        <span class="text-2xl font-black text-blue-400">19,90€</span>
+                        <span class="text-xs text-slate-500 line-through">29,90€</span>
+                    </div>
+                    <p class="text-[10px] text-blue-300 font-bold mb-4 uppercase tracking-widest">🪒 Cuidado Personal</p>
+                </div>
+                <a href="https://amzn.to/3MeNJZO" target="_blank" class="block w-full bg-red-600 text-white text-center py-4 md:py-3 rounded-xl font-bold text-xs uppercase hover:bg-red-700 transition shadow-lg">Comprar ahora</a>
+            </div>
+
         </div>
-        <a href="https://amzn.to/4bDDXe1" target="_blank" class="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-bold text-xs uppercase hover:bg-red-700 transition">Ver en Amazon</a>
-    </div>
-
-    <div class="bg-slate-800 rounded-2xl p-4 shadow-xl border border-slate-700 flex flex-col justify-between">
-        <div>
-            <img src="https://m.media-amazon.com/images/I/71AISiv3ywL._AC_SY300_SX300_QL70_ML2_.jpg" referrerpolicy="no-referrer" class="h-48 w-full object-contain mb-4 rounded-lg bg-slate-700 p-2">
-            <h3 class="font-bold text-sm line-clamp-2 text-white italic">Multiherramienta 18-en-1 Acero</h3>
-            <p class="text-blue-400 font-black text-xl my-2">20.89€</p>
-            <p class="text-[10px] text-blue-300 font-bold mb-3 uppercase tracking-widest">🛠️ Útil y Resistente</p>
-        </div>
-        <a href="https://amzn.to/4qoxtDm" target="_blank" class="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-bold text-xs uppercase hover:bg-red-700 transition">Ver en Amazon</a>
-    </div>
-
-    <div class="bg-slate-800 rounded-2xl p-4 shadow-xl border border-slate-700 flex flex-col justify-between">
-        <div>
-            <img src="https://m.media-amazon.com/images/I/615oN+klRtL._AC_SY300_SX300_QL70_ML2_.jpg" referrerpolicy="no-referrer" class="h-48 w-full object-contain mb-4 rounded-lg bg-slate-700 p-2">
-            <h3 class="font-bold text-sm line-clamp-2 text-white italic">Recortadora Híbrida Profesional Cecotec</h3>
-            <p class="text-blue-400 font-black text-xl my-2">19.90€</p>
-            <p class="text-[10px] text-blue-300 font-bold mb-3 uppercase tracking-widest">🪒 Cuidado Personal</p>
-        </div>
-        <a href="https://amzn.to/3MeNJZO" target="_blank" class="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-bold text-xs uppercase hover:bg-red-700 transition">Ver en Amazon</a>
-    </div>
-
-</div>
     </main>
 
     <script>
@@ -78,14 +115,24 @@
             const target = new Date("February 14, 2026 00:00:00").getTime();
             const now = new Date().getTime();
             const diff = target - now;
+
+            const d = document.getElementById("days");
+            const h = document.getElementById("hours");
+            const m = document.getElementById("minutes");
+            const s = document.getElementById("seconds");
+
             if (diff > 0) {
-                document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
-                document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
-                document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
-                document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+                if(d) d.innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+                if(h) h.innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+                if(m) m.innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                if(s) s.innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+            } else {
+                const timerDisplay = document.getElementById("timer-display");
+                if(timerDisplay) timerDisplay.innerHTML = "<span class='text-2xl text-white uppercase italic tracking-tighter'>¡Feliz San Valentín! ❤️</span>";
             }
         }
-        setInterval(updateTimer, 1000); updateTimer();
+        setInterval(updateTimer, 1000); 
+        updateTimer();
     </script>
 </body>
 </html>
