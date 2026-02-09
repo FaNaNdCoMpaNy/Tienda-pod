@@ -3,86 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regalos Para Él | San Valentín 2026</title>
+    <title>Para Él | San Valentín 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-    </style>
 </head>
 <body class="bg-slate-900 text-gray-100">
-
     <nav class="bg-slate-800 shadow-md sticky top-0 z-50 border-b border-slate-700">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-black text-red-500 tracking-tighter">❤️ AMOREXPRESS</a>
-            <div class="flex space-x-6 font-bold text-sm uppercase">
-                <a href="index.html" class="hover:text-red-400 transition">Inicio</a>
-                <a href="para-ella.html" class="hover:text-red-400 transition">Para Ella</a>
-            </div>
+            <a href="index.html" class="font-bold text-sm uppercase text-slate-500">Volver</a>
         </div>
     </nav>
 
-    <header class="bg-slate-800 py-16 px-4 text-center border-b border-slate-700">
-        <h1 class="text-4xl font-black mb-2 uppercase italic tracking-tighter text-white">Selección para Él</h1>
-        <p class="text-slate-400 font-medium uppercase text-xs tracking-[0.3em]">Gadgets y Estilo de última hora</p>
-    </header>
-<div class="bg-slate-800 border-b border-slate-700 py-4 sticky top-[60px] z-40">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-4">
-        <p class="text-xs font-black text-red-500 uppercase tracking-widest text-center md:text-left">⚡ ¡DATE PRISA! EL TIEMPO SE AGOTA:</p>
-        <div class="flex gap-4 text-white font-black">
-            <div class="text-center"><span id="days" class="text-xl block leading-none">00</span><span class="text-[8px] text-slate-500 uppercase">Días</span></div>
-            <div class="text-center"><span id="hours" class="text-xl block leading-none">00</span><span class="text-[8px] text-slate-500 uppercase">Horas</span></div>
-            <div class="text-center"><span id="minutes" class="text-xl block leading-none">00</span><span class="text-[8px] text-slate-500 uppercase">Min</span></div>
-            <div class="text-center"><span id="seconds" class="text-xl block leading-none text-red-500">00</span><span class="text-[8px] text-slate-500 uppercase">Seg</span></div>
+    <div class="bg-red-600 text-white py-4 text-center sticky top-[56px] z-40">
+        <div class="flex justify-center gap-6 font-black items-center">
+            <p class="text-[10px] uppercase hidden md:block tracking-widest">Queda poco tiempo:</p>
+            <div class="flex gap-4">
+                <div class="text-center"><span id="days" class="text-xl block">00</span><span class="text-[7px]">DÍAS</span></div>
+                <div class="text-center"><span id="hours" class="text-xl block">00</span><span class="text-[7px]">HORAS</span></div>
+                <div class="text-center"><span id="minutes" class="text-xl block">00</span><span class="text-[7px]">MIN</span></div>
+                <div class="text-center"><span id="seconds" class="text-xl block text-slate-900">00</span><span class="text-[7px]">SEG</span></div>
+            </div>
         </div>
     </div>
-</div>
 
     <main class="container mx-auto px-4 py-12">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            
-            <div class="bg-slate-800 rounded-2xl p-4 shadow-xl border border-slate-700 flex flex-col justify-between">
-                <div>
-                    <img src="https://m.media-amazon.com/images/I/61Zjl9S9f-L._AC_SL1500_.jpg" class="h-48 w-full object-contain mb-4 rounded-lg bg-slate-700 p-2">
-                    <h3 class="font-bold text-sm line-clamp-2 text-white">Smartwatch Militar con Llamadas</h3>
-                    <p class="text-blue-400 font-black text-xl my-2">45,99€</p>
-                </div>
-                <a href="TU_LINK" target="_blank" class="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-bold text-xs uppercase hover:bg-red-700 transition">Ver Oferta</a>
+        <h1 class="text-3xl font-black mb-8 uppercase italic border-l-4 border-red-600 pl-3">Regalos Para Él</h1>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-slate-800 rounded-2xl p-4 border border-slate-700">
+                <img src="https://m.media-amazon.com/images/I/61Zjl9S9f-L._AC_SL1500_.jpg" class="h-40 w-full object-contain mb-4 bg-slate-700 rounded-lg p-2">
+                <h3 class="font-bold text-xs h-8 overflow-hidden text-white">Smartwatch Deportivo</h3>
+                <p class="text-lg font-black text-blue-400 my-2">45,99€</p>
+                <a href="TU_LINK" target="_blank" class="block bg-red-600 text-white text-center py-2 rounded font-bold text-[10px] uppercase">Lo quiero</a>
             </div>
-
-            <div class="bg-slate-800 rounded-2xl p-4 shadow-xl border border-slate-700 flex flex-col justify-between">
-                <div>
-                    <img src="https://m.media-amazon.com/images/I/718nS2P4X-L._AC_SL1500_.jpg" class="h-48 w-full object-contain mb-4 rounded-lg bg-slate-700 p-2">
-                    <h3 class="font-bold text-sm line-clamp-2 text-white">Kit Completo Cuidado Barba Premium</h3>
-                    <p class="text-blue-400 font-black text-xl my-2">21,90€</p>
-                </div>
-                <a href="TU_LINK" target="_blank" class="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-bold text-xs uppercase hover:bg-red-700 transition">Ver Oferta</a>
             </div>
-
-            <div class="bg-slate-800 rounded-2xl p-4 shadow-xl border border-slate-700 flex flex-col justify-between">
-                <div>
-                    <img src="https://m.media-amazon.com/images/I/71pOnkU472L._AC_SL1500_.jpg" class="h-48 w-full object-contain mb-4 rounded-lg bg-slate-700 p-2">
-                    <h3 class="font-bold text-sm line-clamp-2 text-white">Altavoz Bluetooth Resistente al Agua</h3>
-                    <p class="text-blue-400 font-black text-xl my-2">29,99€</p>
-                </div>
-                <a href="TU_LINK" target="_blank" class="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-bold text-xs uppercase hover:bg-red-700 transition">Ver Oferta</a>
-            </div>
-
-            <div class="bg-slate-800 rounded-2xl p-4 shadow-xl border border-slate-700 flex flex-col justify-between">
-                <div>
-                    <img src="https://m.media-amazon.com/images/I/61kMv9J3R1L._AC_SL1200_.jpg" class="h-48 w-full object-contain mb-4 rounded-lg bg-slate-700 p-2">
-                    <h3 class="font-bold text-sm line-clamp-2 text-white">Cartera Minimalista con Bloqueo RFID</h3>
-                    <p class="text-blue-400 font-black text-xl my-2">15,95€</p>
-                </div>
-                <a href="TU_LINK" target="_blank" class="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-bold text-xs uppercase hover:bg-red-700 transition">Ver Oferta</a>
-            </div>
-
-        </div>
     </main>
 
-    <footer class="text-center py-8 text-slate-500 text-xs font-bold uppercase tracking-widest">
-        <a href="index.html">← Volver al inicio</a>
-    </footer>
+    <script>
+        function updateTimer() {
+            const target = new Date("February 14, 2026 00:00:00").getTime();
+            const now = new Date().getTime();
+            const diff = target - now;
+            if (diff > 0) {
+                document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+                document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+                document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+                document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+            }
+        }
+        setInterval(updateTimer, 1000); updateTimer();
+    </script>
 </body>
 </html>
