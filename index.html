@@ -1,129 +1,54 @@
-HTML
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AmorExpress | Especial San Valentín 2026</title>
-    <style>
-        :root { --amazon-orange: #FF9900; --love-red: #e11d48; --bg-gray: #f8f9fa; }
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-gray); margin: 0; scroll-behavior: smooth; }
-        header { background: white; padding: 20px; text-align: center; border-bottom: 3px solid var(--love-red); }
-        h1 { margin: 0; color: var(--love-red); }
-        
-        /* Reloj y Nav */
-        #countdown-container { background: #fff1f2; padding: 12px; text-align: center; border-bottom: 1px solid #fda4af; position: sticky; top: 0; z-index: 1000; }
-        nav { background: white; padding: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-        nav a { text-decoration: none; color: #555; font-weight: bold; font-size: 0.8rem; padding: 8px 12px; border-radius: 20px; border: 1px solid #eee; }
-        
-        /* Grid */
-        .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; padding: 20px; max-width: 1300px; margin: 0 auto; }
-        .product-card { background: white; border-radius: 10px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; flex-direction: column; border: 1px solid #eee; }
-        .product-card img { width: 100%; height: 180px; object-fit: contain; }
-        .product-card h3 { font-size: 0.9rem; height: 40px; overflow: hidden; margin: 10px 0; }
-        .price { font-size: 1.2rem; font-weight: bold; color: #b12704; margin-bottom: 10px; }
-        .btn-amazon { background: #f0c14b; color: #111; text-align: center; padding: 10px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 0.8rem; border: 1px solid #a88734; }
-        
-        /* Aviso Amazon */
-        .amazon-disclaimer { background: #f3f4f6; padding: 20px; margin: 40px 20px; border-radius: 8px; font-size: 0.8rem; color: #666; line-height: 1.4; border: 1px dashed #ccc; }
-        
-        #backToTop { position: fixed; bottom: 20px; right: 20px; background: var(--love-red); color: white; width: 40px; height: 40px; border-radius: 50%; display: none; justify-content: center; align-items: center; text-decoration: none; z-index: 1000; }
-        h2 { text-align: center; margin-top: 50px; border-left: 5px solid var(--love-red); display: inline-block; padding-left: 15px; margin-left: 20px; }
-    </style>
+    <title>Regalos San Valentín 2026 | Los 6 Mejores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-slate-50 text-gray-800 font-sans">
 
-<header>
-    <h1>❤️ AmorExpress</h1>
-</header>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-red-600">❤️ AmorExpress</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="para-ella.html" class="hover:text-red-500 font-medium text-gray-600 uppercase text-sm tracking-wider">Para Ella</a>
+                <a href="para-el.html" class="hover:text-red-500 font-medium text-gray-600 uppercase text-sm tracking-wider">Para Él</a>
+            </div>
+            <a href="#estrellas" class="bg-red-600 text-white px-4 py-2 rounded text-xs font-bold uppercase md:hidden">Top 6</a>
+        </div>
+    </nav>
 
-<div id="countdown-container">
-    <p id="countdown-text" style="margin:0; color:var(--love-red); font-weight:bold;"></p>
-</div>
+    <header class="bg-gradient-to-r from-red-600 to-pink-500 text-white py-16 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Regalos que llegan a tiempo</h1>
+        <p class="text-lg opacity-90 mb-8">Selección exclusiva de Amazon para San Valentín 2026</p>
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="para-ella.html" class="bg-white text-red-600 px-8 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition">Explorar Para Ella</a>
+            <a href="para-el.html" class="bg-slate-800 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition">Explorar Para Él</a>
+        </div>
+    </header>
 
-<nav>
-    <a href="#lamparas">💡 Lámparas</a>
-    <a href="#joyas">💎 Joyas</a>
-    <a href="#perfumes">🌸 Perfumes</a>
-    <a href="#tecnologia">🎧 Tecnología</a>
-</nav>
+    <main id="estrellas" class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center mb-2">Los 6 Imprescindibles</h2>
+        <p class="text-center text-gray-500 mb-10 text-sm">Los más vendidos y con mejores reseñas de este año</p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl shadow-md border border-gray-100 p-4 flex flex-col justify-between">
+                <span class="bg-yellow-100 text-yellow-800 text-[10px] font-bold px-2 py-1 rounded w-max mb-2 uppercase">Best Seller</span>
+                <img src="https://via.placeholder.com/300" class="w-full h-40 object-contain mb-4">
+                <div>
+                    <h3 class="font-bold text-sm mb-1 line-clamp-2">Nombre del Producto Estrella</h3>
+                    <p class="text-lg font-black text-gray-900 mb-3">00,00€</p>
+                </div>
+                <a href="TU_LINK" target="_blank" class="block w-full bg-yellow-400 py-2 rounded font-bold text-xs text-center hover:bg-yellow-500 uppercase tracking-tighter">Comprar en Amazon</a>
+            </div>
+            </div>
+    </main>
 
-<h2 id="lamparas">Lámparas Personalizadas y Decoración</h2>
-<div class="container">
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71X8X8x-8pL._AC_SL1500_.jpg" alt="Regalo">
-        <h3>Lámpara de Metacrilato con Foto Personalizada</h3>
-        <p class="price">24,99€</p>
-        <a href="TU_ENLACE_AQUI" class="btn-amazon">Ver en Amazon</a>
-    </div>
-    </div>
-
-<h2 id="joyas">Joyas y Relojes</h2>
-<div class="container">
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/71z7m7W4S0L._AC_SY695_.jpg" alt="Regalo">
-        <h3>Collar Corazón Plata Ley 925</h3>
-        <p class="price">32,00€</p>
-        <a href="TU_ENLACE_AQUI" class="btn-amazon">Ver en Amazon</a>
-    </div>
-    </div>
-
-<h2 id="perfumes">Fragancias y Cosmética</h2>
-<div class="container">
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/61mO-pW6F2L._AC_SL1000_.jpg" alt="Regalo">
-        <h3>Calvin Klein Eternity for Women</h3>
-        <p class="price">45,90€</p>
-        <a href="TU_ENLACE_AQUI" class="btn-amazon">Ver en Amazon</a>
-    </div>
-    </div>
-
-<h2 id="tecnologia">Tecnología y Gadgets</h2>
-<div class="container">
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/6127n796S6L._AC_SL1500_.jpg" alt="Regalo">
-        <h3>Altavoz Bluetooth JBL GO 3</h3>
-        <p class="price">34,99€</p>
-        <a href="TU_ENLACE_AQUI" class="btn-amazon">Ver en Amazon</a>
-    </div>
-    </div>
-
-<div class="amazon-disclaimer">
-    <h3>Información Legal Relevante</h3>
-    <p><strong>Declaración de Afiliado:</strong> En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables. Esto no incrementa el precio que tú pagas por el producto.</p>
-    <p><strong>Privacidad y Datos:</strong> Esta web no recopila datos personales. Sin embargo, al hacer clic en los botones "Ver en Amazon", serás redirigido a Amazon.es, donde se utilizan cookies para rastrear la venta y procesar el pedido. Puedes consultar la Política de Privacidad de Amazon en su propia plataforma.</p>
-    <p><strong>Precios:</strong> Los precios y la disponibilidad pueden variar después de la última actualización. El precio final será el que aparezca en el sitio de Amazon en el momento de la compra.</p>
-</div>
-
-<a href="#" id="backToTop">↑</a>
-
-<footer>
-    <p>© 2026 AmorExpress | Expertos en San Valentín</p>
-</footer>
-
-<script>
-    // Cuenta atrás
-    const targetDate = new Date("February 14, 2026 00:00:00").getTime();
-    const textElement = document.getElementById("countdown-text");
-    function updateClock() {
-        const now = new Date().getTime();
-        const diff = targetDate - now;
-        if (diff <= 0) { textElement.innerHTML = "¡Feliz San Valentín! ❤️"; return; }
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const secs = Math.floor((diff % (1000 * 60)) / 1000);
-        textElement.innerHTML = `⏳ ¡Date prisa! Quedan ${days}d ${hours}h ${mins}m ${secs}s para San Valentín`;
-    }
-    setInterval(updateClock, 1000); updateClock();
-
-    // Botón arriba
-    const btt = document.getElementById("backToTop");
-    window.onscroll = function() {
-        btt.style.display = (window.pageYOffset > 400) ? "flex" : "none";
-    };
-</script>
+    <footer class="bg-white py-8 border-t border-gray-200 text-center">
+        <p class="text-gray-400 text-xs">© 2026 AmorExpress. <a href="privacidad.html" class="underline">Aviso Legal Afiliación</a></p>
+    </footer>
 
 </body>
 </html>
