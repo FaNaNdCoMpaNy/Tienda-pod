@@ -182,3 +182,39 @@
     </main>
 
     <footer class="bg-slate-900 text-white py-12
+    <script>
+    function updateTimer() {
+        // Fecha objetivo: 14 de Febrero de 2026
+        const targetDate = new Date("February 14, 2026 00:00:00").getTime();
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        // Referencias a los elementos del DOM
+        const d = document.getElementById("days");
+        const h = document.getElementById("hours");
+        const m = document.getElementById("minutes");
+        const s = document.getElementById("seconds");
+
+        if (difference > 0) {
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // Actualizamos solo si los elementos existen
+            if(d) d.innerText = days.toString().padStart(2, '0');
+            if(h) h.innerText = hours.toString().padStart(2, '0');
+            if(m) m.innerText = minutes.toString().padStart(2, '0');
+            if(s) s.innerText = seconds.toString().padStart(2, '0');
+        } else {
+            const timerContainer = document.getElementById("days")?.parentElement?.parentElement;
+            if (timerContainer) {
+                timerContainer.innerHTML = "<h3 class='text-2xl md:text-4xl font-black text-red-600 uppercase italic tracking-tighter'>¡FELIZ SAN VALENTÍN! ❤️</h3>";
+            }
+        }
+    }
+
+    // Ejecutar cada segundo y una vez al cargar
+    setInterval(updateTimer, 1000);
+    updateTimer();
+</script>
