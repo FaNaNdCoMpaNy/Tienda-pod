@@ -76,7 +76,16 @@
             display: flex;
             gap: 1.5rem;
             font-size: 1.2rem;
-            cursor: pointer;
+        }
+
+        .nav-icons a {
+            color: var(--dark-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-icons a:hover {
+            color: var(--primary-color);
         }
 
         /* --- HERO SECTION --- */
@@ -313,55 +322,60 @@
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <header>
         <nav class="navbar">
-            <a href="#" class="logo">
+            <a href="index.html" class="logo">
                 <i class="fa-solid fa-wind"></i> ClimaPro
             </a>
             <ul class="nav-links">
-                <li><a href="#productos">Inicio</a></li>
-                <li><a href="#aires">Aires Acondicionados</a></li>
-                <li><a href="#ventiladores">Ventiladores</a></li>
-                <li><a href="#contacto">Soporte</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="politicas.html">Políticas de Envío</a></li>
+                <li><a href="contacto.html">Contacto y Soporte</a></li>
             </ul>
             <div class="nav-icons">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <i class="fa-solid fa-shopping-cart"></i>
+                <a href="carrito.html" title="Ver Carrito">
+                    <i class="fa-solid fa-shopping-cart"></i>
+                </a>
             </div>
         </nav>
     </header>
 
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
             <h1>Tu Zona de Confort, Siempre a la Temperatura Ideal</h1>
-            <p>Descubre la tecnología más eficiente en climatización. Envío rápido garantizado y soporte técnico 24/7.</p>
-            <a href="#productos" class="btn">Ver Catálogo Ofertas</a>
+            <p>Descubre la tecnología más eficiente en climatización. Envío rápido garantizado y soporte técnico dedicado.</p>
+            <a href="#productos" class="btn">Ver Catálogo de Ofertas</a>
         </div>
     </section>
 
+    <!-- FEATURES -->
     <section class="features">
         <div class="feature-card">
             <i class="fa-solid fa-truck-fast"></i>
             <h3>Envío Express Gratis</h3>
-            <p>Recibe tu pedido en la puerta de tu casa sin costos ocultos.</p>
+            <p>Recibe tu pedido en la puerta de tu casa sin costos ocultos en la península.</p>
         </div>
         <div class="feature-card">
             <i class="fa-solid fa-shield-halved"></i>
-            <h3>Garantía de 2 Años</h3>
-            <p>Todos nuestros productos cuentan con soporte y garantía oficial.</p>
+            <h3>Garantía de Satisfacción</h3>
+            <p>Todos nuestros productos cuentan con soporte y 14 días de devolución sin preguntas.</p>
         </div>
         <div class="feature-card">
             <i class="fa-solid fa-headset"></i>
-            <h3>Atención 24/7</h3>
-            <p>¿Dudas con tu compra? Nuestro equipo te asesora en tiempo real.</p>
+            <h3>Soporte Eficiente</h3>
+            <p>¿Dudas con tu pedido? Respondemos a tus correos en menos de 24 horas laborables.</p>
         </div>
     </section>
 
+    <!-- PRODUCTOS -->
     <section class="products-section" id="productos">
         <h2 class="section-title">Los Más Vendidos</h2>
         
         <div class="product-grid">
             
+            <!-- Producto 1 -->
             <div class="product-card">
                 <div class="product-img">
                     <i class="fa-solid fa-snowflake" style="font-size: 4rem; color: #bde0fe;"></i>
@@ -381,10 +395,11 @@
                         <span class="current-price">299.99€</span>
                         <span class="old-price">399.99€</span>
                     </div>
-                    <a href="#" class="btn-buy">Comprar Ahora</a>
+                    <a href="carrito.html" class="btn-buy">Comprar Ahora</a>
                 </div>
             </div>
 
+            <!-- Producto 2 -->
             <div class="product-card">
                 <div class="product-img">
                     <i class="fa-solid fa-fan" style="font-size: 4rem; color: #cbd5e1;"></i>
@@ -404,10 +419,11 @@
                         <span class="current-price">69.95€</span>
                         <span class="old-price">89.99€</span>
                     </div>
-                    <a href="#" class="btn-buy">Comprar Ahora</a>
+                    <a href="carrito.html" class="btn-buy">Comprar Ahora</a>
                 </div>
             </div>
 
+            <!-- Producto 3 -->
             <div class="product-card">
                 <div class="product-img">
                     <i class="fa-solid fa-box-tissue" style="font-size: 4rem; color: #bae6fd;"></i>
@@ -419,17 +435,18 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-visible"></i>
+                        <i class="fa-solid fa-star"></i>
                         <span>(19)</span>
                     </div>
                     <div class="price-container">
                         <span class="current-price">450.00€</span>
                         <span class="old-price">549.00€</span>
                     </div>
-                    <a href="#" class="btn-buy">Comprar Ahora</a>
+                    <a href="carrito.html" class="btn-buy">Comprar Ahora</a>
                 </div>
             </div>
 
+            <!-- Producto 4 -->
             <div class="product-card">
                 <div class="product-img">
                     <i class="fa-solid fa-wind" style="font-size: 4rem; color: #e2e8f0;"></i>
@@ -448,34 +465,33 @@
                         <span class="current-price">129.99€</span>
                         <span class="old-price">179.99€</span>
                     </div>
-                    <a href="#" class="btn-buy">Comprar Ahora</a>
+                    <a href="carrito.html" class="btn-buy">Comprar Ahora</a>
                 </div>
             </div>
 
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <div class="footer-col">
                 <h4>ClimaPro</h4>
-                <p style="color: #ccc; font-size: 0.9rem;">Tu tienda de confianza para combatir el calor y el frío con la mejor tecnología.</p>
+                <p style="color: #ccc; font-size: 0.9rem;">Tu tienda de confianza para combatir el calor y el frío con la mejor tecnología del mercado.</p>
             </div>
             <div class="footer-col">
                 <h4>Políticas</h4>
                 <ul>
-                    <li><a href="#">Política de Envíos</a></li>
-                    <li><a href="#">Devoluciones y Reembolsos</a></li>
-                    <li><a href="#">Términos del Servicio</a></li>
-                    <li><a href="#">Aviso Legal</a></li>
+                    <li><a href="politicas.html">Política de Envíos</a></li>
+                    <li><a href="politicas.html">Devoluciones y Reembolsos</a></li>
+                    <li><a href="contacto.html">Términos del Servicio</a></li>
                 </ul>
             </div>
-            <div class="footer-col" id="contacto">
+            <div class="footer-col">
                 <h4>Contacto</h4>
                 <ul>
                     <li><i class="fa-solid fa-envelope"></i> soporte@climapro.com</li>
-                    <li><i class="fa-solid fa-phone"></i> +34 900 000 000</li>
-                    <li>Respuesta en menos de 24 horas</li>
+                    <li><a href="contacto.html" style="color: #ccc; text-decoration: underline;">Formulario de Soporte</a></li>
                 </ul>
             </div>
         </div>
