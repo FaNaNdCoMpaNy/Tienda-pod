@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | ClimaPro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary-color: #007BFF; --dark-color: #1A1A1A; --light-color: #F8F9FA; --border-color: #D1D5DB; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #ffffff; color: var(--dark-color); line-height: 1.6; }
+        
+        header { background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; max-width: 1200px; margin: 0 auto; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--dark-color); font-weight: 500; }
+
+        .contact-container { max-width: 1000px; margin: 3rem auto; padding: 0 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        @media (max-width: 768px) { .contact-container { grid-template-columns: 1fr; } }
+
+        .contact-info h1 { font-size: 2.2rem; margin-bottom: 1rem; color: var(--primary-color); }
+        .contact-info p { color: #4b5563; margin-bottom: 2rem; }
+        .info-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+        .info-item i { font-size: 1.5rem; color: var(--primary-color); }
+
+        /* Formulario */
+        .contact-form { background: var(--light-color); padding: 2rem; border-radius: 8px; border: 1px solid #e5e7eb; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 500; font-size: 0.95rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; font-size: 1rem; outline: none; }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--primary-color); }
+        
+        .btn-submit { background: var(--primary-color); color: white; border: none; padding: 0.8rem 1.5rem; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; width: 100%; transition: background 0.3s; }
+        .btn-submit:hover { background: #0056b3; }
+
+        footer { background-color: var(--dark-color); color: white; padding: 2rem 5%; text-align: center; margin-top: 5rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><i class="fa-solid fa-wind"></i> ClimaPro</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="politicas.html">Envíos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+        <!-- Información de atención al cliente -->
+        <div class="contact-info">
+            <h1>¿Necesitas ayuda?</h1>
+            <p>Nuestro equipo de soporte técnico y atención al cliente está disponible para resolver cualquier pregunta sobre especificaciones de productos o el estado de tu envío.</p>
+            
+            <div class="info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <h3>Correo Electrónico</h3>
+                    <p>soporte@climapro.com</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fa-solid fa-clock"></i>
+                <div>
+                    <h3>Horario de Atención</h3>
+                    <p>Lunes a Viernes: 9:00 - 18:00 (Respuesta en menos de 24h)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario interactivo -->
+        <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Nombre Completo</label>
+                <input type="text" id="name" required placeholder="Ej. Juan Pérez">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" required placeholder="juan@email.com">
+            </div>
+            <div class="form-group">
+                <label for="order">Número de Pedido (Opcional)</label>
+                <input type="text" id="order" placeholder="Ej. #CP1024">
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje / Consulta</label>
+                <textarea id="message" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Mensaje</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ClimaPro. Soporte dedicado al cliente.</p>
+    </footer>
+
+</body>
+</html>
